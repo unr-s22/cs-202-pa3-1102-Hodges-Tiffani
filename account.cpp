@@ -1,4 +1,5 @@
 #include "account.h"
+<<<<<<< HEAD
 #ifndef account_h
 #define account_h
 #include <iostream>
@@ -30,3 +31,8 @@ void Account::printDetails(){
 } 
 
 #endif account_h
+=======
+
+Account::Account():Money(){
+}
+>>>>>>> 33a00e233c449d71739b19a5d3264556309df069
