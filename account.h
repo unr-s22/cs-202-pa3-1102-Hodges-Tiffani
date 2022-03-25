@@ -2,6 +2,7 @@
 #define Account_H
 
 #include <iostream>
+#include <vector>
 #include "Money.h"
 
 class  Account: public Money{
@@ -17,8 +18,8 @@ public:
 	makeDeposit();
 	makeWithdrawals();
 
-	std::vector<Money> depositVector;
-	std::vector<Money> withdrawalVector;
+	std::vector<Money> deposits;
+	std::vector<Money> withdrawals;
 
 	//overload of << operator
 	
