@@ -7,12 +7,15 @@
 class  Account: public Money{
 
 private: 
-	
+	double balance;
     
 
 public:
-   
-
+   Account();
+   Account (double balance);
+   double getBalance();
+   double withdraw(double);
+   void printDetails();
 
 };
 
