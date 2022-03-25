@@ -12,7 +12,13 @@ private:
 
 public:
    
+	Account();//constructor
+	
+	makeDeposit();
+	makeWithdrawals();
 
+	std::vector<Money>;
+	
 
 };
 
