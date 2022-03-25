@@ -12,12 +12,17 @@ private:
 
 public:
    
-	Account();//constructor
+	Account::Account():Money(){}//constructor
 	
 	makeDeposit();
 	makeWithdrawals();
 
-	std::vector<Money>;
+	std::vector<Money> depositVector;
+	std::vector<Money> withdrawalVector;
+
+	//overload of << operator
+	
+	 
 	
 
 };

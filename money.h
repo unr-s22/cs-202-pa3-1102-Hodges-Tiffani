@@ -11,8 +11,6 @@ private:
 
 	int cents;
 	
-    
-
 public:
 
 	Money(); //default constructor
