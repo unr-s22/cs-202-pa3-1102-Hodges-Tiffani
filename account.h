@@ -8,24 +8,34 @@
 class  Account: public Money{
 
 private: 
-	
+	double balance;
     
-
 public:
+
+
+   	Account(): Money(balance){}//constructor
+
+   	double getBalance();
+  	double withdraw(double);
    
-	Account::Account():Money(){}//constructor
+	void printDetails();
 	
-	makeDeposit();
-	makeWithdrawals();
+	double makeDeposit();
+	double makeWithdrawals();
 
 	std::vector<Money> deposits;
 	std::vector<Money> withdrawals;
 
 	//overload of << operator
-	
-	 
-	
 
+	friend std::ostream &operator<<(std::ostream &os, const Account &account){
+		os << "$" << money.all_cents * 0.01;
+		return os;
+	}
+   
+
+	//Account (double balance);
+	
 };
 
 
