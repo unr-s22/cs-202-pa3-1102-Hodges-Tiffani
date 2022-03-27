@@ -12,7 +12,7 @@ Money::Money(){
 Money::Money(int dollars, int cents):dollars(dollars), cents(cents){
 }
 
-int Money::getCents(){
+/*int Money::getCents(){
     return cents;
 }
 
@@ -23,11 +23,7 @@ void Money::setCents(int cents){
 int Money::getMoney(){
 	//return amounts of money in cents
 	return dollars + cents/100;
-}
-
-
-/*Money::Money(int dol, int cen)
-{
-    dollars = dol;
-    cents = cen;
 }*/
+
+
+

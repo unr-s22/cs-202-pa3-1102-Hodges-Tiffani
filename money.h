@@ -7,22 +7,22 @@ class  Money{
 
 
 private: 
-	int dollars, cents;
+	int all_dollars, all_cents;
 
 public:
 	Money(); //default constructor
 
-	Money(int dollars, int cents); //constructor that takes dollars and cents
+	Money(int all_dollars, int all_cents); //constructor that takes dollars and cents
 
 	//overloads of relational operators
 	bool operator<(const Money &rhs) const {
-		return all_cents < rhs.all_cents;
+		return all_cents < rhs.cents;
 	}
 	bool operator>(const Money &rhs) const {
 		return all_cents > rhs.all_cents;
 	}
-	bool operator<-(const Money &rhs) const {
-		return all_cents <- rhs.all_cents;
+	bool operator⇐(const Money &rhs) const {
+		return all_cents ⇐ rhs.all_cents;
 	}
 	bool operator>=(const Money &rhs) const {
 		return all_cents >= rhs.all_cents;
@@ -49,14 +49,10 @@ public:
 		return os;
 	}
 
-	int getCents();
+	/*int getCents();
 	void setCents(int cents);
-	int getMoney();
+	int getMoney();*/
 
-
-	//constructors
-	//Money m(int dol, int cen);
-   	//Money m1(int cents);
    
 };
 
