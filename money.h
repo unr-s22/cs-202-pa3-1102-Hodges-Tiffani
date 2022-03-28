@@ -16,13 +16,13 @@ public:
 
 	//overloads of relational operators
 	bool operator<(const Money &rhs) const {
-		return all_cents < rhs.cents;
+		return all_cents < rhs.all_cents;
 	}
 	bool operator>(const Money &rhs) const {
 		return all_cents > rhs.all_cents;
 	}
-	bool operator⇐(const Money &rhs) const {
-		return all_cents ⇐ rhs.all_cents;
+	bool operator->(const Money &rhs) const {
+		return all_cents -> rhs.all_cents;
 	}
 	bool operator>=(const Money &rhs) const {
 		return all_cents >= rhs.all_cents;
@@ -49,9 +49,9 @@ public:
 		return os;
 	}
 
-	/*int getCents();
+	int getCents();
+	int getMoney();
 	void setCents(int cents);
-	int getMoney();*/
 
    
 };

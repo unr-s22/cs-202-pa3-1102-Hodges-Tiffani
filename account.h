@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#include "Money.h"
+#include "money.h"
 
 class  Account: public Money{
 
@@ -13,7 +13,7 @@ private:
 public:
 
 
-   	Account(): Money(balance){}//constructor
+   	Account(): Money(){}//constructor
 
    	double getBalance();
   	double withdraw(double);
