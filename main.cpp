@@ -29,7 +29,7 @@ int main(){
 	
 
 	//call to the withdrawal method and input numbers
-	account.withdrawals();
+	account.makeWithdrawals();
 
 	double withdrawal1 = 300.10;
 	double withdrawal2 = 201.34;	
