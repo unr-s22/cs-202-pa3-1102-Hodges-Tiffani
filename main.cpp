@@ -47,33 +47,41 @@ int main(){
 
 	if(m1 > m2){
      		std::cout<<"yesss"<<std::endl;
-	} else 
+	}else 
 		std::cout<<"nooooo"<<std::endl;
+	}
 
 	if(m1 < m2){
      		std::cout<<"yesss"<<std::endl;
-	} else 
+	}else 
 		std::cout<<"nooooo"<<std::endl;
+	}
 
 	if(m1 <= m2){
      		std::cout<<"yesss"<<std::endl;
-	} else 
+	}else 
 		std::cout<<"nooooo"<<std::endl;
+	}
 
 	if(m1 >= m2){
      		std::cout<<"yesss"<<std::endl;
-	} else 
+	}else 
 		std::cout<<"nooooo"<<std::endl;
+	}
+
 
 	if(m1 != m2){
      		std::cout<<"yesss"<<std::endl;
-	} else 
+	}else 
 		std::cout<<"nooooo"<<std::endl;
+	}
 
 	if(m1 == m2){
      		std::cout<<"yesss"<<std::endl;
-	} else 
+	}else 
 		std::cout<<"nooooo"<<std::endl;
+	}
+
 
 	//check +/- operators
 	std::cout<<m1+m2<<std::endl;
