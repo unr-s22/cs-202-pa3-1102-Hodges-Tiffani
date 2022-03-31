@@ -12,15 +12,15 @@ int main(){
 
 	//call to deposit method and input deposits
 
-	account.deposits;
+	account.makeDeposit();
 
-	double input1 = 200.00;
-	double input2 = 300.24;	
-	double input3 = 501.22;
+	double deposit1 = 200.00;
+	double deposit2 = 300.24;	
+	double deposit3 = 501.22;
 
-	deposits.push_back(input1);
-	deposits.push_back(input2);
-	deposits.push_back(input3);
+	deposits.push_back(deposit1);
+	deposits.push_back(deposit2);
+	deposits.push_back(deposit3);
 
 		
 	//print account
@@ -28,14 +28,13 @@ int main(){
 	
 
 	//call to the withdraw method and input numbers
-	double input4 = 300.10;
-	double input5 = 201.34;	
-
 	account.withdrawals();
+	double withdrawal1 = 300.10;
+	double withdrawal2 = 201.34;	
 
-	withdrawals.push_back(input1);
-	withdrawals.push_back(input2);
-	withdrawals.push_back(input3);
+
+	withdrawals.push_back(withdrawal1);
+	withdrawals.push_back(withdrawal2);
 
 
 	//verify relational operators function correctly
