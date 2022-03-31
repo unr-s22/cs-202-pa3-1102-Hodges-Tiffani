@@ -3,41 +3,43 @@
 
 #include <iostream>
 #include <vector>
+
 #include "money.h"
 
 class  Account: public Money{
 
 private: 
-	double balance;
+
+	Money account;
+
+	//starting balance for account
+	Money initialBalance;
+
+	//vectors that store withdrawals and deposits
+	std::vector<Money> deposits;
+	std::vector<Money> withdrawals;
     
 public:
 
-
-   	Account(): Money(){}//constructor
-
-   	double getBalance();
-  	double withdraw(double);
-   
-	void printDetails();
+	Money getInitialBalance(); //return the initial balance of the account
+	Money findBalance(); //find balance after changes are made to the account
 	
-	double makeDeposit();
-	double makeWithdrawals();
+	void makeDeposit(Money accountDeposit); //function for making deposits to the account
+	void makeWithdrawals(Money accountWithdrawal); //function for making withdrawals to the account
 
-	std::vector<Money> deposits;
-	std::vector<Money> withdrawals;
-
-	//overload of << operator
-
-	friend std::ostream &operator<<(std::ostream &os, const Account &account){
-		os << "$" << money.all_cents * 0.01;
-		return os;
+	//vector functions that return the deposits and withdrawals for the account
+	//determine what deposits or withdrawals have been made/how many 
+	std::vector<Money> determineDeposits(){
+		return deposits;
 	}
+	std::vector<Money> determineWithdrawals(){
+		return withdrawals;
+	}
+	
+	//overload of << operator. Print details for the account
+	friend std::ostream& operator<<(std::ostream& output, const Account &account); 
    
-
-	//Account (double balance);
 	
 };
-
-
 
 #endif //Account_H  

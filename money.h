@@ -7,45 +7,51 @@ class  Money{
 
 
 private: 
-	int all_dollars, all_cents;
+	int dollars, cents;
+	double initialBalance;
 
 public:
+	Money getInitialBalance();
+
+	Money accountDeposit();
+	Money accountWithdrawal();
+
 	Money(); //default constructor
 
-	Money(int all_dollars, int all_cents); //constructor that takes dollars and cents
+	Money(int dollars, int cents); //constructor that takes dollars and cents
 
 	//overloads of relational operators
 	bool operator<(const Money &rhs) const {
-		return all_cents < rhs.all_cents;
+		return cents < rhs.cents;
 	}
 	bool operator>(const Money &rhs) const {
-		return all_cents > rhs.all_cents;
+		return cents > rhs.cents;
 	}
 	bool operator->(const Money &rhs) const {
-		return all_cents -> rhs.all_cents;
+		return cents -> rhs.cents;
 	}
 	bool operator>=(const Money &rhs) const {
-		return all_cents >= rhs.all_cents;
+		return cents >= rhs.cents;
 	}
 	bool operator!=(const Money &rhs) const {
-		return all_cents != rhs.all_cents;
+		return cents != rhs.cents;
 	}
 	bool operator==(const Money &rhs) const {
-		return all_cents == rhs.all_cents;
+		return cents == rhs.cents;
 	}
 
 	//overloads of math operators
 	bool operator+(const Money &rhs) const {
-		return all_cents + rhs.all_cents;
+		return cents + rhs.cents;
 	}
 	bool operator-(const Money &rhs) const {
-		return all_cents - rhs.all_cents;
+		return cents - rhs.cents;
 	}
 	
 
 	//overload of << operator
 	friend std::ostream &operator<<(std::ostream &os, const Money &money){
-		os << "$" << money.all_cents * 0.01;
+		os << "$" << money.cents * 0.01;
 		return os;
 	}
 
