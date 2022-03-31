@@ -41,15 +41,43 @@ int main(){
 	//verify relational operators function correctly
 	Money m1(105,45);
 	Money m2(23,80);
+
+	//check that relational operators behave correctly 
+
 	if(m1 > m2){
      		std::cout<<"yesss"<<std::endl;
 	} else 
-		std::cout<<"error"<<std::endl;
+		std::cout<<"nooooo"<<std::endl;
 
 	if(m1 < m2){
      		std::cout<<"yesss"<<std::endl;
 	} else 
-		std::cout<<"error"<<std::endl;
+		std::cout<<"nooooo"<<std::endl;
+
+	if(m1 <= m2){
+     		std::cout<<"yesss"<<std::endl;
+	} else 
+		std::cout<<"nooooo"<<std::endl;
+
+	if(m1 >= m2){
+     		std::cout<<"yesss"<<std::endl;
+	} else 
+		std::cout<<"nooooo"<<std::endl;
+
+	if(m1 != m2){
+     		std::cout<<"yesss"<<std::endl;
+	} else 
+		std::cout<<"nooooo"<<std::endl;
+
+	if(m1 == m2){
+     		std::cout<<"yesss"<<std::endl;
+	} else 
+		std::cout<<"nooooo"<<std::endl;
+
+	//check +/- operators
+	std::cout<<m1+m2<<std::endl;
+	std::cout<<m1-m2<<std::endl;
+
 
 	return 0;
 
