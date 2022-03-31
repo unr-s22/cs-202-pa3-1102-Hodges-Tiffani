@@ -16,7 +16,7 @@ std::ostream& Account::operator<<(std::ostream& output, const Account& account){
 	//interator that allows the program to print the appropriate number of deposits that have been made
 	int index = 1;
 	for(auto& accountDeposit: account.determineDeposits()){
-		std::output<<"("<<index<<")" <<std::endl;
+		std::output<<"("<<index<<") " <<std::endl;
 		index++;
 		std::output<<accountDeposit<<std::endl;
 	}
@@ -27,7 +27,7 @@ std::ostream& Account::operator<<(std::ostream& output, const Account& account){
 	//interator that allows the program to print the appropriate number of withdrawals that have been made
 	int index = 1;
 	for(auto& accountWithdrawal: account.determinWithdrawals()){
-		std::output<<"("<<index<<")" <<std::endl;
+		std::output<<"("<<index<<") " <<std::endl;
 		index++;
 		std::output<<accountWithdrawal<<std::endl;
 	}
@@ -35,7 +35,6 @@ std::ostream& Account::operator<<(std::ostream& output, const Account& account){
 	return output;
 
 }
-
 
 //uses the Money class to determine the initial balance 
 Money Account::getInitialBalance(){

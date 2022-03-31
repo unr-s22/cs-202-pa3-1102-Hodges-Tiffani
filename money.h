@@ -1,6 +1,7 @@
 #ifndef Money_H
 #define Money_H
 #include <iostream>
+#include <vector>
                              
 
 class  Money{
@@ -10,9 +11,12 @@ private:
 	int dollars, cents;
 	double initialBalance;
 
-public:
-	Money getInitialBalance();
+	std::vector<Money> deposits;
+	std::vector<Money> withdrawals;
 
+public:
+
+	Money getInitialBalance();
 	Money accountDeposit();
 	Money accountWithdrawal();
 
@@ -27,8 +31,8 @@ public:
 	bool operator>(const Money &rhs) const {
 		return cents > rhs.cents;
 	}
-	bool operator->(const Money &rhs) const {
-		return cents -> rhs.cents;
+	bool operator<=(const Money &rhs) const {
+		return cents <+ rhs.cents;
 	}
 	bool operator>=(const Money &rhs) const {
 		return cents >= rhs.cents;
@@ -41,18 +45,17 @@ public:
 	}
 
 	//overloads of math operators
-	bool operator+(const Money &rhs) const {
+	bool operator+(const Money &rhs) {
 		return cents + rhs.cents;
 	}
-	bool operator-(const Money &rhs) const {
+	bool operator-(const Money &rhs) {
 		return cents - rhs.cents;
 	}
 	
-
 	//overload of << operator
-	friend std::ostream &operator<<(std::ostream &os, const Money &money){
-		os << "$" << money.cents * 0.01;
-		return os;
+	friend std::ostream &operator<<(std::ostream &output, const Money &money){
+		output << "$" << money.cents * 0.01;
+		return output;
 	}
 
 	int getCents();
