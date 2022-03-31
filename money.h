@@ -55,7 +55,7 @@ public:
 	}
 	
 	//overload of << operator
-	friend std::ostream &operator<<(std::ostream &output, const Money &money){
+	friend std::ostream &operator<<(std::ostream& output, const Money &money){
 		output << "$" << money.cents * 0.01;
 		return output;
 	}
