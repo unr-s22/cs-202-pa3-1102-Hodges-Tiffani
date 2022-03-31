@@ -1,5 +1,6 @@
 #ifndef Money_H
 #define Money_H
+
 #include <iostream>
 #include <vector>
                              
@@ -8,6 +9,7 @@ class  Money{
 
 
 private: 
+
 	int dollars, cents;
 	double initialBalance;
 
@@ -62,7 +64,6 @@ public:
 	int getMoney();
 	void setCents(int cents);
 
-   
 };
 
 #endif //Money_H  

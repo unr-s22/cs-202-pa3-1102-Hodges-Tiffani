@@ -14,17 +14,20 @@ std::ostream& Account::operator<<(std::ostream& output, const Account& account){
 	std::output<<"Number of Deposits: "<<account.determineDeposits()<<std::endl;
 
 	//interator that allows the program to print the appropriate number of deposits that have been made
+	//first have to declare a counter variable 
 	int index = 1;
 	for(auto& accountDeposit: account.determineDeposits()){
-		std::output<<"("<<index<<") " <<std::endl;
+		std::output<<"("<<index<<") " <<std::endl; //(1), (2)...etc
 		index++;
 		std::output<<accountDeposit<<std::endl;
 	}
+
 	std::output<<"--------------------------"<<std::endl;
 	std::output<<"Number of Withdrawals: "<<account.determineWithdrawals()<<std::endl;
 	std::output<<"--------------------------"<<std::endl;
 
 	//interator that allows the program to print the appropriate number of withdrawals that have been made
+	//first have to redeclare the counter variable 
 	int index = 1;
 	for(auto& accountWithdrawal: account.determinWithdrawals()){
 		std::output<<"("<<index<<") " <<std::endl;
@@ -50,6 +53,7 @@ Money Account::findBalance(){
 	for (auto& accountWithdrawal: account.determineWithdrawals()){
 		accountBalance = accountBalance - accountWithdrawal;
 	}
+
 	for (auto& accountDeposit: account.determineDeposits()){
 		accountBalance = accountBalance + accountDeposit;
 	}

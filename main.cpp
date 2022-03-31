@@ -5,13 +5,14 @@
 
 int main(){
 
-
+	//starting balance
 	double account = 300.23;
 
+
+	//print account
 	std::cout << account << std::endl;
 
 	//call to deposit method and input deposits
-
 	account.makeDeposit();
 
 	double deposit1 = 200.00;
@@ -27,8 +28,9 @@ int main(){
 	std::cout << account << std::endl;
 	
 
-	//call to the withdraw method and input numbers
+	//call to the withdrawal method and input numbers
 	account.withdrawals();
+
 	double withdrawal1 = 300.10;
 	double withdrawal2 = 201.34;	
 

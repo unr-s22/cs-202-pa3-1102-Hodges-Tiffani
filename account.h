@@ -28,7 +28,7 @@ public:
 	void makeWithdrawals(Money accountWithdrawal); //function for making withdrawals to the account
 
 	//vector functions that return the deposits and withdrawals for the account
-	//determine what deposits or withdrawals have been made/how many 
+	//determine what deposits or withdrawals have been made-> meaning how many 
 	std::vector<Money> determineDeposits(){
 		return deposits;
 	}

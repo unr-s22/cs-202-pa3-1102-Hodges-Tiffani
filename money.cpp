@@ -35,11 +35,11 @@ int Money::getMoney(){
        		dollars += 1;
        		total = total + dollars;
        		sum = (sum + dollars + (cents/100));
-   		}
-   	 else{
+   	}
+   	else{
         	total += (cents/100);
         	sum += (cents/100);
-    	}
+	}
 }
 
 
