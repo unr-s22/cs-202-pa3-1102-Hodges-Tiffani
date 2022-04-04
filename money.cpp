@@ -38,6 +38,3 @@ int Money::getMoney(){
         	sum += (cents/100);
 	}
 }
-
-
-

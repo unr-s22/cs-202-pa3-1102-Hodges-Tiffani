@@ -8,6 +8,9 @@ int main(){
 	//starting balance
 	double account = 300.23;
 
+	Money deposits;
+	Money withdrawals;
+
 
 	//print account
 	std::cout << account << std::endl;
@@ -47,38 +50,38 @@ int main(){
 
 	if(m1 > m2){
      		std::cout<<"yesss"<<std::endl;
-	}else 
+	}else{ 
 		std::cout<<"nooooo"<<std::endl;
 	}
 
 	if(m1 < m2){
      		std::cout<<"yesss"<<std::endl;
-	}else 
+	}else{ 
 		std::cout<<"nooooo"<<std::endl;
 	}
 
 	if(m1 <= m2){
      		std::cout<<"yesss"<<std::endl;
-	}else 
+	}else{ 
 		std::cout<<"nooooo"<<std::endl;
 	}
 
 	if(m1 >= m2){
      		std::cout<<"yesss"<<std::endl;
-	}else 
+	}else{ 
 		std::cout<<"nooooo"<<std::endl;
 	}
 
 
 	if(m1 != m2){
      		std::cout<<"yesss"<<std::endl;
-	}else 
+	}else{ 
 		std::cout<<"nooooo"<<std::endl;
 	}
 
 	if(m1 == m2){
      		std::cout<<"yesss"<<std::endl;
-	}else 
+	}else{ 
 		std::cout<<"nooooo"<<std::endl;
 	}
 

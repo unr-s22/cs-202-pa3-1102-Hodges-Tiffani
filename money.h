@@ -11,16 +11,16 @@ class  Money{
 private: 
 
 	int dollars, cents;
-	double initialBalance;
-
-	std::vector<Money> deposits;
-	std::vector<Money> withdrawals;
 
 public:
 
+	double initialBalance;
 	Money getInitialBalance();
 	Money accountDeposit();
 	Money accountWithdrawal();
+
+	void determineDeposits(int deposits);
+	void determineWithdrawals(int withdrawals);
 
 	Money(); //default constructor
 

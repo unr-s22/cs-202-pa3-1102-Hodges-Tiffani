@@ -11,13 +11,14 @@ class  Account: public Money{
 private: 
 
 	Money account;
+	int size;
 
 	//starting balance for account
 	Money initialBalance;
 
 	//vectors that store withdrawals and deposits
-	std::vector<Money> deposits;
-	std::vector<Money> withdrawals;
+	std::vector<Money*> deposits;
+	std::vector<Money*> withdrawals;
     
 public:
 
@@ -27,13 +28,20 @@ public:
 	void makeDeposit(Money accountDeposit); //function for making deposits to the account
 	void makeWithdrawals(Money accountWithdrawal); //function for making withdrawals to the account
 
-	//vector functions that return the deposits and withdrawals for the account
+	//functions that return the deposits and withdrawals for the account
 	//determine what deposits or withdrawals have been made-> meaning how many 
-	std::vector<Money> determineDeposits(){
-		return deposits;
+	void determineDeposits(int deposits){
+		int index = 0;
+   		for(index = 0; index < size; index++){
+       			deposits++;
+  		}
 	}
-	std::vector<Money> determineWithdrawals(){
-		return withdrawals;
+
+	void determineWithdrawals(int withdrawals){
+		int index = 0;
+   		for(index = 0; index < size; index++){
+       			withdrawals++;
+  		}
 	}
 	
 	//overload of << operator. Print details for the account
